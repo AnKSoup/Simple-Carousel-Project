@@ -1,0 +1,94 @@
+:root {
+    /* Edit carousel variables here */
+    --navbar-height: 60px;
+    --header-height: 40vh;
+
+    --slide-transition-duration: 800ms;
+
+    --current-slide-shower-bar-color: rgba(0, 0, 0, 0);
+
+    --current-slide-shower-gap: 2px;
+    --current-slide-shower-alignment: start;
+
+    --slide-indicator-color: rgba(255, 255, 255, 0.8);
+    --slide-indicator-width: 12px;
+    --slide-indicator-height: 12px;
+    --slide-indicator-border-radius: 6px;
+    --slide-indicator-transition-duration: 300ms;
+
+    --slide-indicator-hover-color: rgb(255, 255, 255);
+    --slide-indicator-hover-height: 15px;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    height: var(--navbar-height);
+    top: 0;
+    position: sticky;
+    background-color: rgb(0, 0, 0);
+}
+
+#header {
+    height: var(--header-height);
+    width: 100%;
+    position: sticky;
+}
+
+#carousel {
+    transition: background-image var(--slide-transition-duration) ease;
+    transition: height 30ms ease ease-in-out;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#titles {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: white;
+    margin-right: 1em;
+    margin-top: 0.5em;
+}
+
+#mainTitle,
+#subTitle {
+    margin: 0;
+}
+
+#slides {
+    display: none;
+}
+
+#currentSlideShowerBar {
+    background-color: var(--current-slide-shower-bar-color);
+}
+
+#currentSlideShower {
+    gap: var(--current-slide-shower-gap);
+    align-items: var(--current-slide-shower-alignment);
+    display: flex;
+    margin-inline: auto;
+}
+
+.slideIndicator {
+    background-color: var(--slide-indicator-color);
+    width: var(--slide-indicator-width);
+    height: var(--slide-indicator-height);
+    border-radius: var(--slide-indicator-border-radius);
+    transition: var(--slide-indicator-transition-duration) ease;
+}
+
+.slideIndicator:hover {
+    background-color: var(--slide-indicator-hover-color);
+    height: var(--slide-indicator-hover-height);
+    cursor: pointer;
+}
