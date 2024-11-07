@@ -35,6 +35,7 @@ nav {
     height: var(--header-height);
     width: 100%;
     position: sticky;
+    pointer-events: none;
 }
 
 #carousel {
@@ -48,6 +49,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
+    pointer-events: all;
 }
 
 #titles {
